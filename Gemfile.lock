@@ -111,6 +111,7 @@ DEPENDENCIES
   jekyll (~> 4.2.2)
   jekyll-feed (~> 0.12)
   jekyll-include-cache
+  jekyll-paginate
   jekyll-remote-theme
   jekyll-seo-tag
   minima (~> 2.5)

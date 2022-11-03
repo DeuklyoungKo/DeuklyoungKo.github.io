@@ -38,6 +38,7 @@ minimal_mistakes_skin: default
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-paginate
 # only work in github.io
 # - jekyll-remote-theme
 
@@ -45,7 +46,6 @@ plugins:
 whitelist:
   - jekyll_plugins
   - jekyll-tagging
-
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -91,7 +91,7 @@ locale: "ko"
 name: "홍길동"
 
 paginate: 3 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: "/results/page:num/"
 
 defaults:
   # _posts
