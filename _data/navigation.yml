@@ -11,20 +11,8 @@ main:
     url: /shineData/
   - title: "언론보도"
     url: /recipes/
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Posts"
-  #   url: /year-archive/
-  # - title: "categories"
-  #   url: /categories-archive/
-  # - title: "Recipes"
-  #   url: /recipes/    
-  # - title: "Tags"
-  #   url: /Tags/
-  - title: "검색"
-    url: /search/
+  # - title: "검색"
+  #   url: /search/
 
 
 foo:
