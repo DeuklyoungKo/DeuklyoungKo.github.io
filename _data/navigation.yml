@@ -3,6 +3,14 @@
 main:
   - title: "연구소개"
     url: /about/
+  - title: "연구 성과"
+    url: /results/
+  - title: "데이터 분석"
+    url: /analysis/
+  - title: "SHINE 데이터"
+    url: /shineData/
+  - title: "언론보도"
+    url: /recipes/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
@@ -15,7 +23,7 @@ main:
   #   url: /recipes/    
   # - title: "Tags"
   #   url: /Tags/
-  - title: "Search"
+  - title: "검색"
     url: /search/
 
 

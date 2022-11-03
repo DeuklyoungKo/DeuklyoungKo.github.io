@@ -1,0 +1,49 @@
+---
+layout: splash
+---
+
+{{ content }}
+
+<!-- {% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
+</div>
+{% assign collectionInYear = page.collection%}
+[{{ collectionInYear }}]
+
+{% for result in site.results %}
+  <h2>{{ result.title }} - {{ result.date }}</h2>
+{% endfor %} -->
+
+
+<ul class="taxonomy__index">
+  {% assign dataInYear = site[page.collection] | where_exp: "item", "item.hidden != true" | group_by_exp: 'element', 'element.date | date: "%Y"' | reverse %}
+  {% for year in dataInYear %}
+    <li>
+      <a href="#{{ year.name }}">
+        <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign dataInYear = site[page.collection] | where_exp: "item", "item.hidden != true" | group_by_exp: 'element', 'element.date | date: "%Y"' | reverse  %}
+{% for year in dataInYear %}
+  <section id="{{ year.name }}" class="taxonomy__section">
+    <h2 class="archive__subtitle">{{ year.name }}</h2>
+    <div class="entries-{{ entries_layout }}">
+      {% for post in year.items reversed %}
+      <div class="list__item">
+        <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+          <h6 class="archive__item-title no_toc" itemprop="headline">
+            <a href="{{post.sourceUrl}}" rel="permalink" target="_blank">{{post.title}} ({{post.date | date: "%Y-%m-%d" }})</a>
+          </h6>
+        </article>
+      </div>
+
+      {% endfor %}
+    </div>
+    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+  </section>
+{% endfor %}

@@ -1,0 +1,40 @@
+
+/* 메인 */
+.mainListContainer {
+    display: flex;
+    flex-wrap: wrap;    
+}
+.mainListSub{
+    flex-grow: 1;
+    padding:10px;
+    /* border:1px #666 solid;     */
+}
+
+.mainListSub div{
+    border:1px #666 solid;
+    padding:5px;
+}
+
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:50%;
+}
+
+/* footer */
+.footerContainer{
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+  
+  }
+  
+  .footerSub{
+    flex-grow: 0;
+    padding:10px;
+  }
+  
+  .footerSub div{
+      padding:5px;
+  }
