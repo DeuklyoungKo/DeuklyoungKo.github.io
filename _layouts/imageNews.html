@@ -1,0 +1,38 @@
+---
+layout: splash
+---
+<style>
+.imageNewsContainer{
+  display: flex;
+  flex-wrap: wrap;  
+}
+
+
+.imageNewsContainer .subContainer{
+    flex-direction: column;
+    width:33%;
+    padding:10px;
+}
+
+.imageNewsContainer .subContainer .image{
+  width:100%;
+}
+
+</style>
+{{ content }}
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  <div class="imageNewsContainer">
+  {% for post in site[page.collection] reversed %}
+    <div class="subContainer">
+      <div class="image">
+        <img src="{{post.sourceImgUrl | relative_url}}">
+      </div>
+      <div class="imageContext">
+        <div class="title"><a href="{{ post.sourceUrl }}" target="_blink">{{ post.title }}</a></div>
+        <div>{{ post.excerpt | strip_html | truncatewords: 20 }} - {{ post.date | date: "%Y.%m.%d" }}</div>
+      </div>
+    </div>  
+  {% endfor %}
+  </div>
+</div>

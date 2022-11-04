@@ -1,0 +1,25 @@
+---
+layout: splash
+---
+
+{{ content }}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% assign entries = site[page.collection] %}
+
+  {% if page.sort_by %}
+    {% assign entries = entries | sort: page.sort_by %}
+  {% endif %}
+
+  {% if page.sort_order == 'reverse' %}
+    {% assign entries = entries | reverse %}
+  {% endif %}
+  <lu>
+  {%- for post in entries -%}
+    {%- unless post.hidden -%}
+      <li><a href="{{post.sourceUrl}}" target="_blank">{{post.title}}</a></li>
+    {%- endunless -%}
+  {%- endfor -%}
+  </lu>
+</div>

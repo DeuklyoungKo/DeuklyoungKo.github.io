@@ -1,13 +1,20 @@
 ---
-title:  "forth data"
+output: true
+
+title:  "collections two"
 date:   2022-10-17 10:38:55 +0900
 categories: jekyll update
-tag: samptest4
-
 header:
   teaser: /assets/images/notice_contents.png
   overlay_image: /assets/images/bg.jpg
   # image: /assets/images/notice_contents.png
+
+  video:
+    id: cTuokF7-RXA
+    provider: youtube
+
+
+
 layout: single
 # classes: wide
 
@@ -42,6 +49,8 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 toc_sticky: true
 
+sidebar:
+  nav: "foo"
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -52,9 +61,15 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
     html > 
 ```
 ## 두번째 1-1
-### 세번째 1-1-1
-### 세번째 1-1-2
-### 세번째 1-1-3
+### 유튜브 1-1-1
+{% include video id="cTuokF7-RXA" provider="youtube" %}
+### 유튜브 1-1-2
+
+### 비메오 1-1-2
+{% include video id="212731897" provider="vimeo" %}
+### Google Drive 1-1-3
+{% include video id="1u41lIbMLbV53PvMbyYc9HzvBug5lNWaO" provider="google-drive" %}
+
 
 # 첫번째 2
 ## 두번째 2-1
