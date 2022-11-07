@@ -15,7 +15,7 @@ header:
             {% for post in site.posts limit:1 %}
                 <a href="{{ post.url }}">{{ post.title }} ({{ post.date | date: "%Y-%m-%d" }})</a>
                 <br>
-                <span class="ellipsis">{{ post.excerpt | strip_html | truncatewords: 10 }}</span>
+                <span class="ellipsis">{{ post.excerpt | strip_html | truncatewords: 7 }}</span>
             {% endfor %}
         </div>
         <div>
@@ -36,7 +36,7 @@ header:
             {% for post in site.posts limit:1 %}
                 <a href="{{ post.url }}">{{ post.title }} / {{ post.date | date: "%Y-%m-%d" }}</a>
                 <br>
-                <span class="ellipsis">{{ post.excerpt | strip_html | truncatewords: 10 }}</span>
+                <span class="ellipsis">{{ post.excerpt | strip_html | truncatewords: 7 }}</span>
             {% endfor %}
         </div>
         <div>
