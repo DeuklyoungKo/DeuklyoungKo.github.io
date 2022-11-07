@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: splash_eng
 ---
 <style>
 .imageNewsContainer{
@@ -23,7 +23,7 @@ layout: splash
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   <div class="imageNewsContainer">
-  {% assign entries = site[page.collection] | where_exp: "page", "page.language == None"%}
+  {% assign entries = site[page.collection] | where_exp: "page", "page.language == 'eng'"%}
   {% for post in entries reversed %}
     <div class="subContainer">
       <div class="image">

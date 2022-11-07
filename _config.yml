@@ -136,3 +136,4 @@ defaults:
       #   - title: "Another Title"
       #     text: "More text here."
 
+truncateLength: 25
