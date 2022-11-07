@@ -1,0 +1,56 @@
+---
+permalink: /eng/
+layout: splash_eng
+header:
+    image: /assets/images/mainBg.png
+<!-- image: /assets/images/notice_contents.png -->
+---
+<!-- {% include figure image_path="https://shineforall.org/wp-content/uploads/2022/01/footer_bgimg.png" alt="this is a placeholder image" caption="" %} -->
+<div class="mainListContainer">
+    <div class="mainListSub">
+        <div>
+            데이터 분석eng <a href="">[+]</a>
+        </div>
+        <div>
+            {% for post in site.posts limit:1 %}
+                <a href="{{ post.url }}">{{ post.title }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+                <br>
+                <span class="ellipsis">{{ post.excerpt | strip_html | truncatewords: 10 }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            <ul>
+            {% for post in site.posts offset:1 limit:3 %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="mainListSub">
+        <div>
+            언론보도 <a href="">[+]</a>
+        </div>        
+        <div>
+            {% for post in site.posts limit:1 %}
+                <a href="{{ post.url }}">{{ post.title }} / {{ post.date | date: "%Y-%m-%d" }}</a>
+                <br>
+                <span class="ellipsis">{{ post.excerpt | strip_html | truncatewords: 10 }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            <ul>
+            {% for post in site.posts offset:1 limit:3 %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }} / {{ post.date | date: "%Y-%m-%d" }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>    
+
+</div>
+<div>
+    
+</div>

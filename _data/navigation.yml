@@ -11,9 +11,27 @@ main:
     url: /shineData/
   - title: "언론보도"
     url: /media/
+  - title: "ENG"
+    url: /eng/    
   # - title: "검색"
   #   url: /search/
 
+
+main_eng:
+  - title: "연구소개e"
+    url: /eng/about/
+  - title: "연구 성과e"
+    url: /eng/results/
+  - title: "데이터 분석e"
+    url: /eng/analysis/
+  - title: "SHINE 데이터e"
+    url: /eng/shineData/
+  - title: "언론보도e"
+    url: /eng/media/
+  - title: "KOR"
+    url: /
+  # - title: "검색"
+  #   url: /search/
 
 foo:
   - title: "Parent Link 1"
