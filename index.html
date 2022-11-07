@@ -11,7 +11,8 @@ header:
             데이터 분석 <a href="">[+]</a>
         </div>
         <div>
-            {% for post in site.posts limit:1 %}
+            {% assign entriesPost = site['posts'] | where_exp: "page", "page.language == None"%}
+            {% for post in entriesPost limit:1 %}
                 <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
                 <br>
                 <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
@@ -19,7 +20,7 @@ header:
         </div>
         <div>
             <ul>
-            {% for post in site.posts offset:1 limit:3 %}
+            {% for post in entriesPost offset:1 limit:3 %}
                 <li>
                     <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
                 </li>
