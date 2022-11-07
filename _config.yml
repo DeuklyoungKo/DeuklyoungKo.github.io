@@ -136,4 +136,7 @@ defaults:
       #   - title: "Another Title"
       #     text: "More text here."
 
-truncateLength: 25
+truncateTitleLength: 23
+truncateContentLength: 35
+truncateTitleEngLength: 40
+truncateContentEngLength: 55

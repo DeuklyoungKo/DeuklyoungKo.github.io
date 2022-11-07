@@ -9,20 +9,21 @@ header:
 <div class="mainListContainer">
     <div class="mainListSub">
         <div>
-            데이터 분석 <a href="">[+]</a>
+            Data Analysis <a href="">[+]</a>
         </div>
         <div>
-            {% for post in site.posts limit:1 %}
-                <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+            {% assign entriesPost = site['posts'] | where_exp: "page", "page.language == 'eng'"%}
+            {% for post in entriesPost limit:1 %}
+                <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
                 <br>
-                <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateLength }}</span>
+                <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentEngLength }}</span>
             {% endfor %}
         </div>
         <div>
             <ul>
-            {% for post in site.posts offset:1 limit:3 %}
+            {% for post in entriesPost offset:1 limit:3 %}
                 <li>
-                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
                 </li>
             {% endfor %}
             </ul>
@@ -30,21 +31,21 @@ header:
     </div>
     <div class="mainListSub">
         <div>
-            언론보도 <a href="">[+]</a>
+            Press Release <a href="">[+]</a>
         </div>        
         <div>
             {% assign entries = site['media'] | where_exp: "page", "page.language == 'eng'"%}
             {% for post in entries limit:1 %}
-                <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateLength }} / {{ post.date | date: "%Y-%m-%d" }}</a>
+                <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleEngLength }} / {{ post.date | date: "%Y-%m-%d" }}</a>
                 <br>
-                <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateLength }}</span>
+                <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentEngLength }}</span>
             {% endfor %}
         </div>
         <div>
             <ul>
             {% for post in entries offset:1 limit:3 %}
                 <li>
-                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
+                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
                 </li>
             {% endfor %}
             </ul>
