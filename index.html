@@ -35,7 +35,7 @@ header:
         <div>
             {% assign entries = site['media'] | where_exp: "page", "page.language == None"%}
             {% for post in entries limit:1 %}
-                <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
+                <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
                 <br>
                 <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
             {% endfor %}
@@ -44,7 +44,7 @@ header:
             <ul>
             {% for post in entries offset:1 limit:3 %}
                 <li>
-                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
+                    <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
                 </li>
             {% endfor %}
             </ul>
