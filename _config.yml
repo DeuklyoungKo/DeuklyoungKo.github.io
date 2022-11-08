@@ -84,7 +84,9 @@ collections:
   results:
     output: true
     search: false
-
+  posts_eng:
+    output: true
+    search: false
 
 
 locale: "ko"
@@ -105,6 +107,7 @@ defaults:
       comments: true
       share: true
       related: true
+      output: true
 
 
 

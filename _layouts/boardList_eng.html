@@ -18,7 +18,11 @@ layout: splash_eng
   <lu>
   {%- for post in entries -%}
     {%- unless post.hidden -%}
+      {% if post.collection == 'posts_eng' %}
+      <li><a href="{{post.url}}" >{{post.title}}</a></li>
+      {% else %}
       <li><a href="{{post.sourceUrl}}" target="_blank">{{post.title}}</a></li>
+      {% endif %}
     {%- endunless -%}
   {%- endfor -%}
   </lu>

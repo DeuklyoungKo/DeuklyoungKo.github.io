@@ -2,7 +2,7 @@
 title:  "video sample data data data data data data "
 date:   2022-10-17 10:38:55 +0900
 categories: jekyll update
-language: eng
+
 header:
   teaser: /assets/images/sample09.jpg
   overlay_image: /assets/images/bg.jpg
@@ -15,10 +15,7 @@ header:
 
 
 layout: single
-# classes: wide
 
-# author_profile: false
-# sidebar: false
 
 
 figure:
