@@ -40,12 +40,18 @@ gem "webrick", "~> 1.7"
 gem "jekyll-include-cache"
 gem "jekyll-seo-tag"
 gem "jekyll-paginate"
+gem "jekyll-sitemap"
+gem "jekyll-include-cache"
 
 
 gem "jekyll-remote-theme"
 gem "jekyll-include-cache", group: :jekyll_plugins
 gem "jekyll-seo-tag", group: :jekyll_plugins
 gem "jekyll-paginate", group: :jekyll_plugins
+gem "jekyll-sitemap", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
+
+
 
 # for work in github.io
 # gem 'github-pages', '~> 227', group: :jekyll_plugins

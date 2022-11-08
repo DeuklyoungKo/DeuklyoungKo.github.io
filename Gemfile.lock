@@ -114,6 +114,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-remote-theme
   jekyll-seo-tag
+  jekyll-sitemap
   minima (~> 2.5)
   minimal-mistakes-jekyll
   tzinfo (~> 1.2)
