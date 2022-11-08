@@ -8,8 +8,6 @@ header:
   overlay_image: /assets/images/bg.jpg
   # image: /assets/images/notice_contents.png
 
-layout: single
-
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
@@ -20,8 +18,14 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 
 # 첫번째 1
 ```
-  ghghgh
-    html > 
+  <html>
+    <head>
+      <title></title>
+    </head>
+    <body>
+      contents
+    </body>
+  </html>
 ```
 ## 두번째 1-1
 ### 유튜브 1-1-1
