@@ -1,12 +1,17 @@
 ---
-title:  "본문 양식에 대한 샘플 페이지 입니다."
+title:  본문 양식에 대한 샘플 페이지 입니다.
+
+header:
+  teaser: https://shineforall.org/wp-content/uploads/2021/09/img_mainpage_phone01.png # 리스트 페이지 썸네일 이미지 주소
 
 ##### 목차 설정 #####
 toc: true # 페이지내 목차를 사용할지 안할지 설정 true|false
-toc_label: "목차"  # 목차 제목
-toc_icon: "cog"   # 목차 아이콘 https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임. 저자권 확인 할 것.
+toc_label: 목차  # 목차 제목
+toc_icon: cog   # 목차 아이콘 https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임. 저자권 확인 할 것.
 toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 ##### 목차 설정 #####
+
+
 ---
 
 본문 양식에 대한 샘플 페이지 입니다. 해당 사이트는 [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes/about/) 테마로 제작되었습니다.
@@ -72,13 +77,13 @@ toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 >
 
 ## 중앙 정렬
-```html
+```md
   ![image-center](https://mmistakes.github.io/minimal-mistakes/assets/images/image-alignment-580x300.jpg){: .align-center}
 ```
 ![image-center](https://mmistakes.github.io/minimal-mistakes/assets/images/image-alignment-580x300.jpg){: .align-center}
 
 ## 이미지 왼쪽 정렬
-```
+```md
 ![image-left](https://mmistakes.github.io/minimal-mistakes/assets/images/image-alignment-150x150.jpg){: .align-left} 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 
 ```
 ![image-left](https://mmistakes.github.io/minimal-mistakes/assets/images/image-alignment-150x150.jpg){: .align-left} 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 
@@ -86,7 +91,7 @@ toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 왼쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 
 
 ## 이미지 오른쪽 정렬
-```
+```md
 ![image-right](https://mmistakes.github.io/minimal-mistakes/assets/images/image-alignment-150x150.jpg){: .align-right} 이미지 오른쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 오른쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 오른쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 
 ```
 ![image-right](https://mmistakes.github.io/minimal-mistakes/assets/images/image-alignment-150x150.jpg){: .align-right} 이미지 오른쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 오른쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 이미지 오른쪽 정렬하고 텍스트를 오른쪽에 알맞은 크기로 배분합니다. 
@@ -206,7 +211,7 @@ toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 
 
 # 목차 만들기
-```
+```m
 페이지 상단에 아래의 메타태그 설정을 통해 옵션값을 조절 한다음
 ---
   toc: true # 페이지내 목차를 사용할지 안할지 설정 true|false
@@ -217,6 +222,16 @@ toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 
 MD 파일 내용에 #, ##, ### 를 사용하게 되면 해당 값을 기준으로 목차를 자동으로 완성시켜 줍니다.
 
+```
+
+# 리스트 페이지 썸네일 이미지 등록
+
+```m
+페이지 상단에 아래의 메타태그 설정을 통해 이미지 주소를 할당합니다. 메타태그내 들어쓰기 위치를 지켜야 합니다.
+---
+  header:
+    teaser: https://shineforall.org/wp-content/uploads/2021/09/img_mainpage_phone01.png # 리스트 페이지 썸네일 이미지 주소
+---
 ```
 
 
