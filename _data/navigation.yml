@@ -11,8 +11,8 @@ main:
     url: /shineData/
   - title: "언론보도"
     url: /media/
-  - title: "ENG"
-    url: /eng/    
+  # - title: "ENG"
+  #   url: /eng/    
   # - title: "검색"
   #   url: /search/
 
@@ -28,8 +28,8 @@ main_eng:
     url: /eng/shineData/
   - title: "Press Release"
     url: /eng/media/
-  - title: "KOR"
-    url: /
+  # - title: "KOR"
+  #   url: /
   # - title: "검색"
   #   url: /search/
 

@@ -120,9 +120,9 @@ toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 
 ## 구글 드라이브 동영상
 ```liquid
-{% raw %}{% include video id="1hbD5Im1pNQBYfQdeDZId9QIyzw7WpM9T" provider="google-drive" %}{% endraw %}
+{% raw %}{% include video id="1u41lIbMLbV53PvMbyYc9HzvBug5lNWaO" provider="google-drive" %}{% endraw %}
 ```
-{% include video id="1hbD5Im1pNQBYfQdeDZId9QIyzw7WpM9T" provider="google-drive" %}
+{% include video id="1u41lIbMLbV53PvMbyYc9HzvBug5lNWaO" provider="google-drive" %}
 
 
 
@@ -203,6 +203,22 @@ toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 
 ## 차트 참고
 [Chart.js](https://www.chartjs.org/docs/latest/getting-started/)
+
+
+# 목차 만들기
+```
+페이지 상단에 아래의 메타태그 설정을 통해 옵션값을 조절 한다음
+---
+  toc: true # 페이지내 목차를 사용할지 안할지 설정 true|false
+  toc_label: "목차"  # 목차 제목
+  toc_icon: "cog"   # 목차 아이콘 https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임. 저자권 확인 할 것.
+  toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
+---
+
+MD 파일 내용에 #, ##, ### 를 사용하게 되면 해당 값을 기준으로 목차를 자동으로 완성시켜 줍니다.
+
+```
+
 
 
 # 양식 참고 페이지
