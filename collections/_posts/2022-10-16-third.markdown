@@ -1,6 +1,5 @@
 ---
 title:  "Welcome to Third"
-date:   2022-10-16 10:38:55 +0900
 categories: jekyll update
 tag: samptest2
 

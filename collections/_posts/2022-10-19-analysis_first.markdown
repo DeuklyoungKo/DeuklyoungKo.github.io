@@ -2,10 +2,7 @@
 output: true
 
 title:  "works test"
-date:   2022-10-17 10:38:55 +0900
-categories: jekyll update
 header:
-  teaser: /assets/images/notice_contents.png
   overlay_image: /assets/images/bg.jpg
   # image: /assets/images/notice_contents.png
 

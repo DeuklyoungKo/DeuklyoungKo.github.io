@@ -69,6 +69,7 @@ whitelist:
 
 head_scripts:
   - https://code.jquery.com/jquery-3.2.1.min.js
+  - https://cdn.jsdelivr.net/npm/chart.js
   # - /assets/js/plugins/jquery.csv.min.js
   # - /assets/js/csv_to_html_table.js  
 
@@ -102,17 +103,26 @@ defaults:
       type: posts
     values:
       layout: single
+      categories: analysis
       read_time: true
       comments: true
       share: true
       related: true
       output: true
+      header:
+        overlay_image: /assets/images/bg2.jpg
+      tag: 데이터 분석
+
 
   - scope:
       path: ""
       type: posts_eng
     values:
       layout: single_eng
+      categories: analysis eng
+      header:
+        overlay_image: /assets/images/bg2.jpg
+      tag: Data Analysis
 
 truncateTitleLength: 23
 truncateContentLength: 35

@@ -1,6 +1,5 @@
 ---
 title:  "비디오 샘플 data"
-date:   2022-10-17 10:38:55 +0900
 categories: jekyll update
 header:
   teaser: /assets/images/sample09.jpg
