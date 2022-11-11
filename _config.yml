@@ -105,9 +105,9 @@ defaults:
       layout: single
       categories: analysis
       read_time: true
-      comments: true
-      share: true
-      related: true
+      # comments: true
+      # share: true
+      # related: true
       output: true
       header:
         overlay_image: /assets/images/bg2.jpg
