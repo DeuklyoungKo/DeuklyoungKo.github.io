@@ -113,7 +113,6 @@ defaults:
         overlay_image: /assets/images/bg2.jpg
       tag: 데이터 분석
 
-
   - scope:
       path: ""
       type: posts_eng
@@ -123,6 +122,8 @@ defaults:
       header:
         overlay_image: /assets/images/bg2.jpg
       tag: Data Analysis
+
+
 
 truncateTitleLength: 23
 truncateContentLength: 35
