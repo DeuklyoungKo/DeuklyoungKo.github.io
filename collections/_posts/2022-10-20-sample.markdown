@@ -2,7 +2,7 @@
 title:  본문 양식에 대한 샘플 페이지 입니다.
 
 header:
-  teaser: https://shineforall.org/wp-content/uploads/2021/09/img_mainpage_phone01.png # 리스트 페이지 썸네일 이미지 주소
+  teaser: https://cdn.pixabay.com/photo/2020/04/15/21/52/mona-lisa-5048372_960_720.jpg # 리스트 페이지 썸네일 이미지 주소
 
 ##### 목차 설정 #####
 toc: true # 페이지내 목차를 사용할지 안할지 설정 true|false
@@ -123,11 +123,15 @@ toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 ```
 {% include video id="417155101" provider="vimeo" %}
 
-## 구글 드라이브 동영상
-```liquid
-{% raw %}{% include video id="1u41lIbMLbV53PvMbyYc9HzvBug5lNWaO" provider="google-drive" %}{% endraw %}
+## 동영상파일 주소로 넣기
+```html
+<video controls="" class="videoContainer">
+  <source type="video/mp4" src="https://shineforall.org/wp-content/uploads/2021/10/SHINE-홍보영상-1편_KT-감염병-대응-연구-소개_최종.mp4">
+</video>
 ```
-{% include video id="1u41lIbMLbV53PvMbyYc9HzvBug5lNWaO" provider="google-drive" %}
+<video controls="" class="videoContainer">
+  <source type="video/mp4" src="https://shineforall.org/wp-content/uploads/2021/10/SHINE-홍보영상-1편_KT-감염병-대응-연구-소개_최종.mp4">
+</video>
 
 
 

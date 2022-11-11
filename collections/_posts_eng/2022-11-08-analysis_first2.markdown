@@ -1,9 +1,7 @@
 ---
 header:
-  image: /assets/images/bg2.jpg
-
+  teaser: https://cdn.pixabay.com/photo/2020/02/09/16/23/coronavirus-4833754_960_720.jpg
 title:  "content test"
-date:   2022-11-08 10:38:55 +0900
 language: eng
 
 

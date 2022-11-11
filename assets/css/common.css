@@ -8,10 +8,10 @@
     flex-grow: 1;
     padding:10px;
     flex-basis: 50%;
-    /* border:1px #666 solid;     */
+    min-width:300px;
 }
 
-.mainListSub div{
+.mainListSub > div{
     border:1px #666 solid;
     padding:5px;
 }
@@ -26,7 +26,7 @@
 /* footer */
 .footerContainer{
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     justify-content: space-between;
   
   }
@@ -82,6 +82,18 @@
 }
 
 
+.mainListSubContainer{
+    display: flex;
+    flex-basis: 0;
+    align-items: center;
+}
+
+.mainListThum{
+    padding:5px;
+    max-height: 150px;
+}
+
+
 /*  Scroll Back To Top Button start */
 #myBtn {
     display: none; /* Hidden by default */
@@ -101,5 +113,9 @@
   
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  .videoContainer{
+    width:100%;
   }
 /*  Scroll Back To Top Button end */

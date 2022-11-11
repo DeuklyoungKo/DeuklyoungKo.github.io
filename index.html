@@ -1,7 +1,7 @@
 ---
 layout: splash
 header:
-    image: /assets/images/mainBg.png
+    image: /assets/images/mainBg2.jpg
 <!-- image: /assets/images/notice_contents.png -->
 ---
 <!-- {% include figure image_path="https://shineforall.org/wp-content/uploads/2022/01/footer_bgimg.png" alt="this is a placeholder image" caption="" %} -->
@@ -13,9 +13,23 @@ header:
         <div>
             {% assign entriesPost = site['posts'] | where_exp: "page", "page.language == None"%}
             {% for post in entriesPost limit:1 %}
-                <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
-                <br>
-                <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
+                {% if post.header.teaser %}
+                    {% assign truncateTitleLengthMedia = site.truncateTitleLength | minus: 10 %}
+                    {% assign truncateContentLengthMedia = site.truncateContentLength | minus: -10 %}
+                    <div class="mainListSubContainer">
+                        <div>
+                            <img class="mainListThum" src="{{post.header.teaser}}">
+                        </div>
+                        <div>
+                            <a href="{{ post.url }}">{{ post.title | strip_html | truncate: truncateTitleLengthMedia }} / {{ post.date | date: "%Y-%m-%d" }}</a> <div>{{ post.excerpt | strip_html | truncate: truncateContentLengthMedia }}</div>
+                        </div>
+                    </div>
+                {% else %}
+                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
+                    <br>
+                    <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
+                {% endif %}            
+
             {% endfor %}
         </div>
         <div>
@@ -33,11 +47,24 @@ header:
             언론보도 <a href="">[+]</a>
         </div>        
         <div>
-            {% assign entries = site['media'] | where_exp: "page", "page.language == None"%}
+            {% assign entries = site['media'] | reverse | where_exp: "page", "page.language == None"%}
             {% for post in entries limit:1 %}
-                <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
-                <br>
-                <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
+                {% if post.sourceImgUrl %}
+                    {% assign truncateTitleLengthMedia = site.truncateTitleLength | minus: 10 %}
+                    {% assign truncateContentLengthMedia = site.truncateContentLength | minus: -10 %}
+                    <div class="mainListSubContainer">
+                        <div>
+                            <img class="mainListThum" src="{{post.sourceImgUrl}}">
+                        </div>
+                        <div>
+                            <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: truncateTitleLengthMedia }} / {{ post.date | date: "%Y-%m-%d" }}</a> <div>{{ post.excerpt | strip_html | truncate: truncateContentLengthMedia }}</div>
+                        </div>
+                    </div>
+                {% else %}
+                    <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
+                    <br>
+                    <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>                
+                {% endif %}
             {% endfor %}
         </div>
         <div>

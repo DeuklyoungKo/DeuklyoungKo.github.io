@@ -3,8 +3,8 @@ output: true
 
 title:  "test."
 header:
-  overlay_image: /assets/images/bg.jpg
-  # image: /assets/images/notice_contents.png
+  teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png # 리스트 페이지 썸네일 이미지 주소
+
 
 layout: single
 
@@ -19,22 +19,6 @@ toc_sticky: true
 
 # 기본 text 양식
 
-## 테이블 넣기
-
-  | Employee         | Salary |                                                              |
-  | --------         | ------ | ------------------------------------------------------------ |
-  | [John Doe](#)    | $1     | Because that's all Steve Jobs needed for a salary.           |
-  | [Jane Doe](#)    | $100K  | For all the blogging she does.                               |
-  | [Fred Bloggs](#) | $100M  | Pictures are worth a thousand words, right? So Jane × 1,000. |
-  | [Jane Bloggs](#) | $100B  | With hair like that?! Enough said.
-
-
-  | Header1 | Header2 | Header3 |
-  |:--------|:-------:|--------:|
-  | cell1   | cell2   | cell3   |
-  | cell4   | cell5   | cell6   |
-  |-----------------------------|
-  | cell1   | cell2   | cell3   |
-  | cell4   | cell5   | cell6   |
-  |=============================|
-  | Foot1   | Foot2   | Foot3   |
+<video controls="" class="videoContainer">
+  <source type="video/mp4" src="https://shineforall.org/wp-content/uploads/2021/10/SHINE-홍보영상-1편_KT-감염병-대응-연구-소개_최종.mp4">
+</video>

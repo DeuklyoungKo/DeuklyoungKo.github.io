@@ -1,6 +1,5 @@
 ---
 title:  "KT reorganizes its infectious disease response research app 'Shine'... Research on COVID-19 begins"
-date:   2022-11-06
 sourceUrl: https://shineforall.org/shine-news/?uid=10&mod=document&pageid=1
 sourceImgUrl: https://shineforall.org/wp-content/uploads/kboard_attached/1/202204/6253847cf19ce2830572.jpg
 language: eng

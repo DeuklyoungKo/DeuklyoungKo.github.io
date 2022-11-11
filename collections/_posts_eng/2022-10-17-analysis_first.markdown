@@ -1,12 +1,10 @@
 ---
-title:  "Global metrics for several key indicators including death rates, vaccinations, contact tracing, and public health policies."
-date:   2022-10-17 10:38:55 +0900
-language: eng
-
 header:
   teaser: /assets/images/notice_contents.png
-  overlay_image: /assets/images/bg.jpg
-  # image: /assets/images/notice_contents.png
+title:  "Global metrics for several key indicators including death rates, vaccinations, contact tracing, and public health policies."
+language: eng
+
+
 
 toc: true
 toc_label: "My Table of Contents"
