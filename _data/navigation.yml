@@ -18,7 +18,7 @@ main:
 
 
 main_eng:
-  - title: "Research Institute"
+  - title: "Research Introduction"
     url: /eng/about/
   - title: "Research Achievements"
     url: /eng/results/
