@@ -4,8 +4,6 @@ header:
 title:  "Global metrics for several key indicators including death rates, vaccinations, contact tracing, and public health policies."
 language: eng
 
-
-
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
