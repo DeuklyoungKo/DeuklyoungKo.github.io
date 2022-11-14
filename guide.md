@@ -104,13 +104,14 @@ title: [제목]
 sourceUrl: [사이트 링크 URL]
 sourceImgUrl: [썸네일 이미지 URL]
 ---
-
+[리스트에 나오는 본문내용]
     ex)
     ---
     title:  "KT, 감염병 대응연구 앱 `샤인` 개편…코로나19 연구 나선다"
     sourceUrl: https://shineforall.org/shine-news/?uid=10&mod=document&pageid=1
     sourceImgUrl: https://shineforall.org/wp-content/uploads/kboard_attached/1/202204/6253847cf19ce2830572.jpg
     ---
+    KT는 AI(인공지능) 기반 감염병 대응연구 애플리케이션 '샤인'의 연구 범위를 독감에서 코로나19까지 확대 개편했다고 15일 밝혔다.
 ```
 
 ### 언론보도 영문 Front Matter(등록폴더 : /collections/_media)
@@ -121,7 +122,7 @@ sourceUrl: [사이트 링크 URL]
 sourceImgUrl: [썸네일 이미지 URL]
 language: eng
 ---
-
+[리스트에 나오는 본문내용]
     ex)
     ---
     title:  "KT, 감염병 대응연구 앱 `샤인` 개편…코로나19 연구 나선다"
@@ -129,4 +130,5 @@ language: eng
     sourceImgUrl: https://shineforall.org/wp-content/uploads/kboard_attached/1/202204/6253847cf19ce2830572.jpg
     language: eng
     ---
+    KT announced on the 15th that it has expanded and reorganized the research scope of its AI (artificial intelligence)-based infectious disease response research application 'Shine' from flu to COVID-19.
 ```
