@@ -12,11 +12,11 @@ header:
             Data Analysis <a href="">[+]</a>
         </div>
         <div>
-            {% assign entriesPost = site['posts_eng'] | reverse | where_exp: "page", "page.language == 'eng'"%}
+            {% assign entriesPost = site['posts'] | where_exp: "page", "page.language == 'eng'"%}
             {% for post in entriesPost limit:1 %}
                 {% if post.header.teaser %}
-                    {% assign truncateTitleLengthMedia = site.truncateTitleLength | minus: 10 %}
-                    {% assign truncateContentLengthMedia = site.truncateContentLength | minus: -10 %}
+                    {% assign truncateTitleLengthMedia = site.truncateTitleEngLength | minus: 10 %}
+                    {% assign truncateContentLengthMedia = site.truncateContentEngLength | minus: -10 %}
                     <div class="mainListSubContainer">
                         <div>
                             <img class="mainListThum" src="{{post.header.teaser}}">
@@ -52,8 +52,8 @@ header:
             {% assign entries = site['media'] | reverse | where_exp: "page", "page.language == 'eng'"%}
             {% for post in entries limit:1 %}
                 {% if post.sourceImgUrl %}
-                    {% assign truncateTitleLengthMedia = site.truncateTitleLength | minus: 10 %}
-                    {% assign truncateContentLengthMedia = site.truncateContentLength | minus: -10 %}
+                    {% assign truncateTitleLengthMedia = site.truncateTitleEngLength | minus: 10 %}
+                    {% assign truncateContentLengthMedia = site.truncateContentEngLength | minus: -10 %}
                     <div class="mainListSubContainer">
                         <div>
                             <img class="mainListThum" src="{{post.sourceImgUrl}}">

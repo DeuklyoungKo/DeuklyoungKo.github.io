@@ -84,17 +84,13 @@ collections:
   results:
     output: true
     search: false
-  posts_eng:
-    output: true
-    search: false
-    layout: single_eng
 
 
 locale: "ko"
 name: "홍길동"
 
-paginate: 5 # amount of posts to show
-paginate_path: "/analysis/page:num/"
+# paginate: 5 # amount of posts to show
+# paginate_path: "/analysis/page:num/"
 
 defaults:
   -
@@ -111,17 +107,17 @@ defaults:
       output: true
       header:
         overlay_image: /assets/images/bg2.jpg
-      tag: 데이터 분석
 
-  - scope:
-      path: ""
-      type: posts_eng
-    values:
-      layout: single_eng
-      categories: analysis eng
-      header:
-        overlay_image: /assets/images/bg2.jpg
-      tag: Data Analysis
+
+  # - scope:
+  #     path: ""
+  #     type: posts_eng
+  #   values:
+  #     layout: single_eng
+  #     categories: analysis eng
+  #     header:
+  #       overlay_image: /assets/images/bg2.jpg
+  #     tag: Data Analysis
 
 
 

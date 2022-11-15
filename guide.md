@@ -1,8 +1,12 @@
+---
+layout: single
+permalink: /guide/
+---
 # 컨텐츠등록 가이드
 
 ## 컨텐츠 분류
 해당 사이트 내에 글을 작성할 수 있는 곳은
-```
+```m
 국문 : 연구성과, 데이터 분석, 언론보도
 영문 : 연구성과, 데이터 분석, 언론보도
 ```
@@ -11,16 +15,15 @@
 ## 컨텐츠 등록 폴더
 이 중 **연구성과**와 **언론보도**는 리스트만 있는 페이지이며 해당 제목 클릭 시 새 탭에서 설정된 사이트가 보이게 됩니다.
 콘텐츠 추가는 국문 영문 각각 Markdown 파일을 특정 폴더에 추가하는 방식으로 구성이 되어 있으며 콘텐츠별 저장 폴더는 다음과 같습니다.
-```
+```m
 연구성과 국문, 영문 : /collections/_results
-데이터 분석 국문 : /collections/_posts
-데이터 분석 영문 : /collections/_posts_eng
+데이터 분석 국문, 영문 : /collections/_posts
 언론보도 국문, 영문 : /collections/_media
 ```
 * 데이터 분석 국문과 영문 폴더가 분리되어 있는 이유는 구문에서 리스트 페이징 기능을 사용하기 위함입니다.
 
 컨텐츠 파일명은 년도-월-일-파일제목.md(또는 .markdown) 양식으로 이루어 지며 행당 년월일이 작성일로 인식되도록 되어 있습니다. 파일제목에 국문이 포함되면 오류가 발생할 소지가 있으니 가급적 영문으로 작성하는 것이 좋습니다.
-```
+```m
 ex) 2022-11-02-contentstitle.md
 or  2022-11-02-covid19Result2022.markdown
 ```
@@ -32,7 +35,7 @@ ref) [Front Matter](https://jekyllrb.com/docs/front-matter/)
 각 컨텐츠별 Front Matter는 아래와 같습니다.
 
 ### 연구성과 국문 Front Matter(등록폴더 : /collections/_results)
-```
+```m
 ---
 title: [제목]
 sourceUrl: [사이트 링크 URL]
@@ -46,7 +49,7 @@ sourceUrl: [사이트 링크 URL]
 ```
 
 ### 연구성과 영문 Front Matter(등록폴더 : /collections/_results)
-```
+```m
 ---
 title: [제목]
 sourceUrl: [사이트 링크 URL]
@@ -62,7 +65,7 @@ language: eng
 ```
 
 ### 데이터분석 국문 Front Matter(등록폴더 : /collections/_posts)
-```
+```m
 ---
 title: [제목]
 header:
@@ -78,13 +81,15 @@ header:
 ```
 * header: 와 teaser:사이의 들여쓰기를 지켜야 합니다.
 
-### 데이터분석 영문 Front Matter(등록폴더 : /collections/_posts_eng)
-```
+### 데이터분석 영문 Front Matter(등록폴더 : /collections/_posts)
+```m
 ---
 title: [제목]
 header:
     teaser: [썸네일 이미지가 있을 경우 썸네일 이미지 URL]
 language: eng
+layout: single_eng
+tag: Data Analysis
 ---
 
     ex)
@@ -93,12 +98,15 @@ language: eng
     header:
         teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png
     language: eng
+    layout: single_eng
+    tag: Data Analysis
     ---
 ```
 * header: 와 teaser:사이의 들여쓰기를 지켜야 합니다.
+* language, layout, tag는 고정 값입니다.
 
 ### 언론보도 국문 Front Matter(등록폴더 : /collections/_media)
-```
+```m
 ---
 title: [제목]
 sourceUrl: [사이트 링크 URL]
