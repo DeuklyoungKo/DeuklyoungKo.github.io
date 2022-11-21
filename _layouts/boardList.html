@@ -15,11 +15,11 @@ layout: splash
   {% if page.sort_order == 'reverse' %}
     {% assign entries = entries | where_exp: "page", "page.language == None" | reverse %}
   {% endif %}
-  <lu>
+  <ul>
   {%- for post in entries -%}
     {%- unless post.hidden -%}
-      <li><a href="{{post.sourceUrl}}" target="_blank">{{post.title}}. {{post.date | date: "%Y-%m-%d" }}</a></li>
+      <li><a href="{{post.sourceUrl}}" target="_blank">{{post.title}}.</a></li>
     {%- endunless -%}
   {%- endfor -%}
-  </lu>
+  </ul>
 </div>

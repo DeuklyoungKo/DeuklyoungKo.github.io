@@ -15,7 +15,7 @@ layout: splash_eng
   {% if page.sort_order == 'reverse' %}
     {% assign entries = entries | where_exp: "page", "page.language == 'eng'" | reverse %}
   {% endif %}
-  <lu>
+  <ul>
   {%- for post in entries -%}
     {%- unless post.hidden -%}
       {% if post.collection == 'posts_eng' %}
@@ -25,5 +25,5 @@ layout: splash_eng
       {% endif %}
     {%- endunless -%}
   {%- endfor -%}
-  </lu>
+  </ul>
 </div>

@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: SHINE
+title: "SHINE"
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -26,13 +26,15 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+logo : "/assets/images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+subtitle : "" # site tagline that appears below site title in masthead
 twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings for local
-# theme: minimal-mistakes-jekyll
+theme: minimal-mistakes-jekyll
 # for github
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+#remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 minimal_mistakes_skin: default
 plugins:
@@ -105,14 +107,14 @@ defaults:
       layout: single
       categories: analysis
       read_time: true
-      comments: true
-      share: true
-      related: true
+      # comments: true
+      # share: true
+      # related: true
       output: true
       header:
-        overlay_image: /assets/images/bg2.jpg
+        overlay_image: /assets/images/bg_analysis.jpg
       tag: 데이터 분석
-
+      height: 16em
 
   - scope:
       path: ""
@@ -121,8 +123,11 @@ defaults:
       layout: single_eng
       categories: analysis eng
       header:
-        overlay_image: /assets/images/bg2.jpg
+        overlay_image: /assets/images/bg_analysis.jpg
       tag: Data Analysis
+      height: 16em
+
+
 
 truncateTitleLength: 23
 truncateContentLength: 35

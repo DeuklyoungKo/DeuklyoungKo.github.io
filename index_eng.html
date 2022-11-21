@@ -1,58 +1,118 @@
 ---
 permalink: /eng/
-layout: splash_eng
+layout: main_eng
 header:
-    image: /assets/images/mainBg.png
+  overlay_image: /assets/images/mainBg2.jpg
 <!-- image: /assets/images/notice_contents.png -->
+height : 19em
 ---
 <!-- {% include figure image_path="https://shineforall.org/wp-content/uploads/2022/01/footer_bgimg.png" alt="this is a placeholder image" caption="" %} -->
-<div class="mainListContainer">
-    <div class="mainListSub">
-        <div>
-            Data Analysis <a href="">[+]</a>
-        </div>
-        <div>
-            {% assign entriesPost = site['posts'] | where_exp: "page", "page.language == 'eng'"%}
-            {% for post in entriesPost limit:1 %}
-                <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
-                <br>
-                <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentEngLength }}</span>
-            {% endfor %}
-        </div>
-        <div>
-            <ul>
-            {% for post in entriesPost offset:1 limit:3 %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
-                </li>
-            {% endfor %}
-            </ul>
-        </div>
-    </div>
-    <div class="mainListSub">
-        <div>
-            Press Release <a href="">[+]</a>
-        </div>        
-        <div>
-            {% assign entries = site['media'] | where_exp: "page", "page.language == 'eng'"%}
-            {% for post in entries limit:1 %}
-                <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleEngLength }} / {{ post.date | date: "%Y-%m-%d" }}</a>
-                <br>
-                <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentEngLength }}</span>
-            {% endfor %}
-        </div>
-        <div>
-            <ul>
-            {% for post in entries offset:1 limit:3 %}
-                <li>
-                    <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
-                </li>
-            {% endfor %}
-            </ul>
-        </div>
-    </div>    
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+<div id="wrapper">
+  <div id="main" role="main">
+    <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+      {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+      {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+      {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+      {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+  
+      <section class="page__content" itemprop="text">
+        <h1 class="mainHeader">Recently Articles</h1>
+        <div class="mainListContainer">
+          <div class="mainListSub">
+            <h2>신종 감염병 대응을 위한 보건 정보 연구와 관련된 <strong>최근 데이터 분석 자료를 확인해 보세요.</strong></h2>
+            <p class="flexBox"><span>Data Analysis</span> <a href="">+</a></p>
+            <div>
+              {% assign entriesPost = site['posts_eng'] | reverse | where_exp: "page", "page.language == 'eng'"%}
+              {% for post in entriesPost limit:1 %}
+                {% if post.header.teaser %}
+                  {% assign truncateTitleLengthMedia = site.truncateTitleLength | minus: 10 %}
+                  {% assign truncateContentLengthMedia = site.truncateContentLength | minus: -10 %}
+                  <div class="mainListSubContainer">
+                    <article class="flexBox">
+                      <figure><img class="mainListThum" src="{{post.header.teaser}}"></figure>
+                      <div>
+                        <a href="{{ post.sourceUrl }}" target="_blank">
+                          <span class="title">{{ post.title | strip_html | truncate: truncateTitleLengthMedia }}</span>
+                          <p>{{ post.excerpt | strip_html | truncate: truncateContentLengthMedia }}</p>
+                          <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+                {% else %}
+                  <article>
+                    <a href="{{ post.sourceUrl }}" target="_blank">
+                      <span class="title">{{ post.title | strip_html | truncate: site.truncateTitleLength  }}</span>
+                      <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
+                      <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                    </a>
+                  </article>
+                {% endif %}
 
-</div>
-<div>
-    
+
+              {% endfor %}
+            </div>
+            <div>
+              <ul>
+              {% for post in entriesPost offset:1 limit:3 %}
+                <li>
+                  <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span></a>
+                </li>
+              {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="mainListSub">
+            <h2>신종 감염병 대응을 위한 보건 정보 연구와 관련된 <strong>최근 언론 보도 기사를 확인해 보세요.</strong></h2>
+            <p class="flexBox"><span>Press Release</span> <a href="">+</a></p>
+            <div>
+              {% assign entries = site['media'] | reverse | where_exp: "page", "page.language == 'eng'"%}
+              {% for post in entries limit:1 %}
+                {% if post.sourceImgUrl %}
+                  {% assign truncateTitleLengthMedia = site.truncateTitleLength | minus: 10 %}
+                  {% assign truncateContentLengthMedia = site.truncateContentLength | minus: -10 %}
+                  <div class="mainListSubContainer">
+                    <article class="flexBox">
+                      <figure><img class="mainListThum" src="{{post.sourceImgUrl}}"></figure>
+                      <div>
+                        <a href="{{ post.sourceUrl }}" target="_blank">
+                          <span class="title">{{ post.title | strip_html | truncate: truncateTitleLengthMedia }}</span>
+                          <p>{{ post.excerpt | strip_html | truncate: truncateContentLengthMedia }}</p>
+                          <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+                {% else %}
+                  <article>
+                    <a href="{{ post.sourceUrl }}" target="_blank">
+                      <span class="title">{{ post.title | strip_html | truncate: site.truncateTitleLength  }}</span>
+                      <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
+                      <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                    </a>
+                  </article>
+                {% endif %}
+
+              {% endfor %}
+            </div>
+            <div>
+              <ul>
+              {% for post in entries offset:1 limit:3 %}
+                <li>
+                  <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
+                </li>
+              {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </article>
+  </div>
 </div>
