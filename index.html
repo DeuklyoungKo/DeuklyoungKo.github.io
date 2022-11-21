@@ -26,7 +26,7 @@ content:
         <div class="mainListContainer">
             <div class="mainListSub">
               <h2>신종 감염병 대응을 위한 보건 정보 연구와 관련된 <strong>최근 데이터 분석 자료를 확인해 보세요.</strong></h2>
-                <p class="flexBox"><span>데이터 분석</span> <a href="">+</a></p>
+                <p class="flexBox"><span>데이터 분석</span> <a href="/analysis">+</a></p>
                 <div>
                     {% assign entriesPost = site['posts'] | where_exp: "page", "page.language == None"%}
                     {% for post in entriesPost limit:1 %}
@@ -37,7 +37,7 @@ content:
                               <article class="flexBox">
                                 <figure><img class="mainListThum" src="{{post.header.teaser}}"></figure>
                                 <div>
-                                  <a href="{{ post.sourceUrl }}" target="_blank">
+                                  <a href="{{ post.url }}" target="_blank">
                                     <span class="title">{{ post.title | strip_html | truncate: truncateTitleLengthMedia }}</span>
                                     <p>{{ post.excerpt | strip_html | truncate: truncateContentLengthMedia }}</p>
                                     <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -47,7 +47,7 @@ content:
                             </div>
                         {% else %}
                           <article>
-                              <a href="{{ post.sourceUrl }}" target="_blank">
+                              <a href="{{ post.url }}" target="_blank">
                                 <span class="title">{{ post.title | strip_html | truncate: site.truncateTitleLength  }}</span>
                                 <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
                                 <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -68,7 +68,7 @@ content:
             </div>
             <div class="mainListSub">
               <h2>신종 감염병 대응을 위한 보건 정보 연구와 관련된 <strong>최근 언론 보도 기사를 확인해 보세요.</strong></h2>
-                <p class="flexBox"><span>언론보도</span> <a href="">+</a></p>
+                <p class="flexBox"><span>언론보도</span> <a href="/media">+</a></p>
                 <div>
                     {% assign entries = site['media'] | reverse | where_exp: "page", "page.language == None"%}
                     {% for post in entries limit:1 %}

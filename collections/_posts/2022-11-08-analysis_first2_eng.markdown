@@ -1,10 +1,10 @@
 ---
 header:
-  image: /assets/images/bg2.jpg
-
+  teaser: https://cdn.pixabay.com/photo/2020/02/09/16/23/coronavirus-4833754_960_720.jpg
 title:  "content test"
-date:   2022-11-08 10:38:55 +0900
 language: eng
+layout: single_eng
+tag: Data Analysis
 
 
 ## 오른쪽 바로 가기 링크가 필요할 경우 아래 줙 해제

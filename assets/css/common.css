@@ -80,6 +80,25 @@ body * {
 	align-content: flex-start;
 }
 
+.mainListSubContainer{
+    display: flex;
+    flex-basis: 0;
+    align-items: center;
+}
+
+.mainListThum{
+    padding:5px;
+    max-height: 150px;
+}
+
+.mainContainer{
+    width:100%;
+    background: url("/assets/images/mainBgSample.jpg")  center center no-repeat;
+    background-size: cover;
+  
+  }
+
+
 /*  Scroll Back To Top Button start */
 #myBtn {
 	display: none; /* Hidden by default */
@@ -99,6 +118,10 @@ body * {
 #myBtn:hover {
 	background-color: #555; /* Add a dark-grey background on hover */
 }
+
+  .videoContainer{
+    width:100%;
+  }
 
 .videoContainer {
 	width: 100%;

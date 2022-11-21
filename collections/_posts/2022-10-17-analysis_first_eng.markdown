@@ -1,12 +1,11 @@
 ---
-title:  "Global metrics for several key indicators including death rates, vaccinations, contact tracing, and public health policies."
-date:   2022-10-17 10:38:55 +0900
-language: eng
-
 header:
-  teaser: /assets/images/notice_contents.png
-  overlay_image: /assets/images/bg.jpg
-  # image: /assets/images/notice_contents.png
+  teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png
+title:  "Global metrics for several key indicators including death rates, vaccinations, contact tracing, and public health policies."
+language: eng
+layout: single_eng
+tag: Data Analysis
+
 
 toc: true
 toc_label: "My Table of Contents"

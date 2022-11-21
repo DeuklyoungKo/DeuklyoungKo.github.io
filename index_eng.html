@@ -27,16 +27,16 @@ height : 19em
             <h2>신종 감염병 대응을 위한 보건 정보 연구와 관련된 <strong>최근 데이터 분석 자료를 확인해 보세요.</strong></h2>
             <p class="flexBox"><span>Data Analysis</span> <a href="">+</a></p>
             <div>
-              {% assign entriesPost = site['posts_eng'] | reverse | where_exp: "page", "page.language == 'eng'"%}
+              {% assign entriesPost = site['posts'] | where_exp: "page", "page.language == 'eng'"%}
               {% for post in entriesPost limit:1 %}
                 {% if post.header.teaser %}
-                  {% assign truncateTitleLengthMedia = site.truncateTitleLength | minus: 10 %}
-                  {% assign truncateContentLengthMedia = site.truncateContentLength | minus: -10 %}
+                  {% assign truncateTitleLengthMedia = site.truncateTitleEngLength | minus: 10 %}
+                  {% assign truncateContentLengthMedia = site.truncateContentEngLength | minus: -10 %}
                   <div class="mainListSubContainer">
                     <article class="flexBox">
                       <figure><img class="mainListThum" src="{{post.header.teaser}}"></figure>
                       <div>
-                        <a href="{{ post.sourceUrl }}" target="_blank">
+                        <a href="{{ post.url }}" target="_blank">
                           <span class="title">{{ post.title | strip_html | truncate: truncateTitleLengthMedia }}</span>
                           <p>{{ post.excerpt | strip_html | truncate: truncateContentLengthMedia }}</p>
                           <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -46,7 +46,7 @@ height : 19em
                   </div>
                 {% else %}
                   <article>
-                    <a href="{{ post.sourceUrl }}" target="_blank">
+                    <a href="{{ post.url }}" target="_blank">
                       <span class="title">{{ post.title | strip_html | truncate: site.truncateTitleLength  }}</span>
                       <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
                       <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>

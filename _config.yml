@@ -86,17 +86,13 @@ collections:
   results:
     output: true
     search: false
-  posts_eng:
-    output: true
-    search: false
-    layout: single_eng
 
 
 locale: "ko"
 name: "홍길동"
 
-paginate: 5 # amount of posts to show
-paginate_path: "/analysis/page:num/"
+# paginate: 5 # amount of posts to show
+# paginate_path: "/analysis/page:num/"
 
 defaults:
   -
