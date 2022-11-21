@@ -93,6 +93,13 @@
     max-height: 150px;
 }
 
+.mainContainer{
+    width:100%;
+    background: url("/assets/images/mainBgSample.jpg")  center center no-repeat;
+    background-size: cover;
+  
+  }
+
 
 /*  Scroll Back To Top Button start */
 #myBtn {
@@ -119,3 +126,4 @@
     width:100%;
   }
 /*  Scroll Back To Top Button end */
+
