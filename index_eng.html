@@ -1,87 +1,42 @@
 ---
 permalink: /eng/
-layout: splash_eng
+layout: main_eng
 header:
-    image: /assets/images/mainBg2.jpg
+  overlay_image: /assets/images/mainBg2_eng.jpg
 <!-- image: /assets/images/notice_contents.png -->
 ---
 <!-- {% include figure image_path="https://shineforall.org/wp-content/uploads/2022/01/footer_bgimg.png" alt="this is a placeholder image" caption="" %} -->
-<div class="mainListContainer">
-    <div class="mainListSub">
-        <div>
-            Data Analysis <a href="">[+]</a>
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+<div id="wrapper">
+  <div id="main" role="main">
+    <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+      {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+      {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+      {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+      {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+  
+      <section class="page__content" itemprop="text">
+        <div class="mainListContainer">
+            <div class="mainListSub">
+              <section>
+                <figure><img src="/assets/images/img_main_1.jpg" alt=""></figure>
+                <p>Introducing SHINE(Study of Health Information for Next Epidemic) Research. </p>
+                <a href="/eng/about/">Get more information</a>
+              </section>
+            </div>
+            <div class="mainListSub">
+              <section>
+                <figure><img src="/assets/images/img_main_2.jpg" alt=""></figure>
+                <p>Exploring the data and results  from SHINE Research.</p>
+                <a href="/eng/results/">Get more information</a>
+              </section>
+            </div>
         </div>
-        <div>
-            {% assign entriesPost = site['posts'] | where_exp: "page", "page.language == 'eng'"%}
-            {% for post in entriesPost limit:1 %}
-                {% if post.header.teaser %}
-                    {% assign truncateTitleLengthMedia = site.truncateTitleEngLength | minus: 10 %}
-                    {% assign truncateContentLengthMedia = site.truncateContentEngLength | minus: -10 %}
-                    <div class="mainListSubContainer">
-                        <div>
-                            <img class="mainListThum" src="{{post.header.teaser}}">
-                        </div>
-                        <div>
-                            <a href="{{ post.url }}">{{ post.title | strip_html | truncate: truncateTitleLengthMedia }} / {{ post.date | date: "%Y-%m-%d" }}</a> <div>{{ post.excerpt | strip_html | truncate: truncateContentLengthMedia }}</div>
-                        </div>
-                    </div>
-                {% else %}
-                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
-                    <br>
-                    <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>
-                {% endif %}    
-                
-
-            {% endfor %}
-        </div>
-        <div>
-            <ul>
-            {% for post in entriesPost offset:1 limit:3 %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} ({{ post.date | date: "%Y-%m-%d" }})</a>
-                </li>
-            {% endfor %}
-            </ul>
-        </div>
-    </div>
-    <div class="mainListSub">
-        <div>
-            Press Release <a href="">[+]</a>
-        </div>        
-        <div>
-            {% assign entries = site['media'] | reverse | where_exp: "page", "page.language == 'eng'"%}
-            {% for post in entries limit:1 %}
-                {% if post.sourceImgUrl %}
-                    {% assign truncateTitleLengthMedia = site.truncateTitleEngLength | minus: 10 %}
-                    {% assign truncateContentLengthMedia = site.truncateContentEngLength | minus: -10 %}
-                    <div class="mainListSubContainer">
-                        <div>
-                            <img class="mainListThum" src="{{post.sourceImgUrl}}">
-                        </div>
-                        <div>
-                            <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: truncateTitleLengthMedia }} / {{ post.date | date: "%Y-%m-%d" }}</a> <div>{{ post.excerpt | strip_html | truncate: truncateContentLengthMedia }}</div>
-                        </div>
-                    </div>
-                {% else %}
-                    <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
-                    <br>
-                    <span class="ellipsis">{{ post.excerpt | strip_html | truncate: site.truncateContentLength }}</span>                
-                {% endif %}
-                
-            {% endfor %}
-        </div>
-        <div>
-            <ul>
-            {% for post in entries offset:1 limit:3 %}
-                <li>
-                    <a href="{{ post.sourceUrl }}" target="_blank">{{ post.title | strip_html | truncate: site.truncateTitleEngLength  }} / {{ post.date | date: "%Y-%m-%d" }}</a>
-                </li>
-            {% endfor %}
-            </ul>
-        </div>
-    </div>    
-
-</div>
-<div>
-    
+      </section>
+    </article>
+  </div>
 </div>

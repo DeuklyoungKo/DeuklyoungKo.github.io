@@ -3,7 +3,7 @@ layout: posts
 title:  "Welcome to Jekyll!2"
 date:   2019-07-14 10:38:55 +0900
 categories: jekyll update
-tag: samptest
+tag : "SHINE 데이터"
 # author: Lunaman
 
 # sidebar:

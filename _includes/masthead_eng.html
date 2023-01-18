@@ -7,10 +7,10 @@
           <a class="site-logo" href="{{ '/eng' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
         <a class="site-title" href="{{ '/eng' | relative_url }}">
-          {{ site.masthead_title | default: site.title }}
+          <!-- {{ site.masthead_title | default: site.title }} -->
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
-        <ul class="visible-links">
+        <ul class="visible-links pcMenu">
           {%- for link in site.data.navigation.main_eng -%}
             {% assign class = '' %}
             {% if page.url contains link.url and link.url != "/" %}
@@ -38,6 +38,23 @@
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
+        <ul class="mobileMenu">
+          {%- for link in site.data.navigation.main_eng -%}
+            {% assign class = '' %}
+            {% if page.url contains link.url %}
+              {% assign class = 'active' %}
+            {% endif %}
+            <li class="masthead__menu-item">
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %} class="{{ class }}">{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+          <li class="masthead__menu-item">
+              <a href="/">
+              <svg xmlns='http://www.w3.org/2000/svg' width='37' height='36' viewBox='0 0 37 36'><g id='icn_language_kor' transform='translate(0.5)'><rect id='사각형_3384' data-name='사각형 3384' width='36' height='36' fill='none'/><g id='그룹_4673' data-name='그룹 4673' transform='translate(-175.382 -90.924)'><rect id='사각형_3390' data-name='사각형 3390' width='36' height='26' transform='translate(175.382 95.924)' fill='#fff' stroke='#e3e3e3' stroke-width='1'/><g id='그룹_4677' data-name='그룹 4677' transform='translate(180.979 99.048)'><g id='그룹_4673-2' data-name='그룹 4673' transform='translate(0.217 0)'><rect id='사각형_3391' data-name='사각형 3391' width='0.956' height='5.735' transform='translate(2.042 6.135) rotate(-146.671)' fill='#090909'/><rect id='사각형_3392' data-name='사각형 3392' width='0.956' height='5.735' transform='translate(3.286 6.952) rotate(-146.671)' fill='#090909'/><rect id='사각형_3393' data-name='사각형 3393' width='0.956' height='5.735' transform='translate(0.799 5.317) rotate(-146.671)' fill='#090909'/></g><g id='그룹_4674' data-name='그룹 4674' transform='translate(18.377 0)'><rect id='사각형_3394' data-name='사각형 3394' width='0.956' height='5.735' transform='translate(1.243 1.343) rotate(-33.329)' fill='#090909'/><rect id='사각형_3395' data-name='사각형 3395' width='0.956' height='2.549' transform='translate(2.487 0.525) rotate(-33.329)' fill='#090909'/><rect id='사각형_3396' data-name='사각형 3396' width='0.956' height='2.549' transform='translate(4.237 3.187) rotate(-33.329)' fill='#090909'/><rect id='사각형_3397' data-name='사각형 3397' width='0.956' height='2.549' transform='translate(0 2.161) rotate(-33.329)' fill='#090909'/><rect id='사각형_3398' data-name='사각형 3398' width='0.956' height='2.549' transform='translate(1.751 4.823) rotate(-33.329)' fill='#090909'/></g><g id='그룹_4675' data-name='그룹 4675' transform='translate(18.503 12.232)'><rect id='사각형_3399' data-name='사각형 3399' width='0.956' height='2.549' transform='translate(3.793 3.473) rotate(-146.671)' fill='#090909'/><rect id='사각형_3400' data-name='사각형 3400' width='0.956' height='2.549' transform='translate(2.042 6.135) rotate(-146.671)' fill='#090909'/><rect id='사각형_3401' data-name='사각형 3401' width='0.956' height='2.549' transform='translate(2.549 2.655) rotate(-146.671)' fill='#090909'/><rect id='사각형_3402' data-name='사각형 3402' width='0.956' height='2.549' transform='translate(0.799 5.317) rotate(-146.671)' fill='#090909'/><rect id='사각형_3403' data-name='사각형 3403' width='0.956' height='2.549' transform='translate(5.036 4.29) rotate(-146.671)' fill='#090909'/><rect id='사각형_3404' data-name='사각형 3404' width='0.956' height='2.549' transform='translate(3.286 6.952) rotate(-146.671)' fill='#090909'/></g><g id='그룹_4676' data-name='그룹 4676' transform='translate(0 12.233)'><rect id='사각형_3405' data-name='사각형 3405' width='0.956' height='5.735' transform='translate(0 2.159) rotate(-33.329)' fill='#090909'/><rect id='사각형_3406' data-name='사각형 3406' width='0.956' height='5.735' transform='translate(2.484 0.525) rotate(-33.329)' fill='#090909'/><rect id='사각형_3407' data-name='사각형 3407' width='0.956' height='2.549' transform='translate(1.243 1.341) rotate(-33.329)' fill='#090909'/><rect id='사각형_3408' data-name='사각형 3408' width='0.956' height='2.549' transform='translate(2.994 4.003) rotate(-33.329)' fill='#090909'/></g><path id='패스_2306' data-name='패스 2306' d='M215.7,122.932a6.055,6.055,0,0,1-1.608,2.334,5.9,5.9,0,0,1-4.861,1.524,6.009,6.009,0,0,1-5.253-4.972,5.825,5.825,0,0,1,.671-4.046,3.155,3.155,0,0,0,.238,2.96,3.06,3.06,0,0,0,3.4,1.268,2.886,2.886,0,0,0,1.67-1.244,3.089,3.089,0,0,1,1.463-1.218,3.126,3.126,0,0,1,4.2,3.015C215.614,122.68,215.555,122.83,215.7,122.932Z' transform='translate(-197.488 -110.98)' fill='#0001fc'/><path id='패스_2307' data-name='패스 2307' d='M216.36,118.91c-.141-.1-.083-.252-.077-.378a3.126,3.126,0,0,0-4.2-3.015,3.089,3.089,0,0,0-1.463,1.218,2.886,2.886,0,0,1-1.67,1.244,3.06,3.06,0,0,1-3.4-1.268,3.155,3.155,0,0,1-.238-2.96l.071-.127c.058,0,.04-.057.058-.087a5.533,5.533,0,0,1,2.241-2.179,6.08,6.08,0,0,1,7.46,1.2A5.9,5.9,0,0,1,216.36,118.91Z' transform='translate(-198.151 -106.958)' fill='#f90203'/></g></g></g></svg>
+
+              </a>
+          </li> 
+        </ul>
       </nav>
     </div>
   </div>

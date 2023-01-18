@@ -54,8 +54,7 @@ $(function() {
 
   var availableSpace, numOfVisibleItems, requiredSpace, timer;
 
-  function check() {
-
+  function check() {    
     winWidth = $( window ).width();
     // Set the current CSS width breakpoint: 0: <768px, 1: <1024px, 2: < 1280px, 3: >= 1280px.
     var curBreakpoint = winWidth < 768 ? 0 : winWidth < 1024 ? 1 : winWidth < 1280 ? 2 : 3;
@@ -123,5 +122,4 @@ $(function() {
     } else check();
   // if page does not have a logo just check
   } else check();
-
 });

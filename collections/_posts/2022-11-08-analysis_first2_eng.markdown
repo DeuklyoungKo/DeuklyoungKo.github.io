@@ -1,11 +1,10 @@
 ---
-header:
-  teaser: https://cdn.pixabay.com/photo/2020/02/09/16/23/coronavirus-4833754_960_720.jpg
+layout: single_eng
 title:  "content test"
 language: eng
-layout: single_eng
-tag: Data Analysis
-
+tag: "Data"
+header:
+  teaser: https://cdn.pixabay.com/photo/2020/02/09/16/23/coronavirus-4833754_960_720.jpg
 
 ## 오른쪽 바로 가기 링크가 필요할 경우 아래 줙 해제
 # toc: true

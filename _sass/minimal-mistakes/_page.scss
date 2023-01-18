@@ -71,6 +71,7 @@ body {
 .page__title {
   margin-top: 0;
   line-height: 1;
+  text-align: center;
 
   a {
     color: $text-color;
@@ -184,11 +185,14 @@ body {
   animation: $intro-transition;
   -webkit-animation-delay: 0.25s;
   animation-delay: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &--overlay {
     position: relative;
     margin-bottom: 2em;
-    padding: 3em 0;
+    padding: 5em 0;
     @include clearfix;
     background-size: cover;
     background-repeat: no-repeat;

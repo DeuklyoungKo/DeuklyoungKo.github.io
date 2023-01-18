@@ -3,8 +3,16 @@ title:  "Welcome to Third(ThirdThirdThirdThirdThirdThird Third) "
 date:   2022-10-16 10:38:55 +0900
 categories: jekyll update
 language: eng
+tag : "Data"
+
+header:
+  #overlay_image: /assets/images/bg.jpg
+  # image: /assets/images/notice_contents.png
 layout: single_eng
-tag: Data Analysis
+# classes: wide
+
+# author_profile: false
+# sidebar: false
 
 
 figure:

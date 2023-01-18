@@ -3,7 +3,7 @@ layout: posts
 title:  "태크 분류 테스트!"
 date:   2020-10-14 10:38:55 +0900
 categories: jekyll update
-tag : 태그별로분류
+tag : "SHINE 데이터"
 
 
 # author: Lunaman

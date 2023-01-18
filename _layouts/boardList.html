@@ -15,11 +15,26 @@ layout: splash
   {% if page.sort_order == 'reverse' %}
     {% assign entries = entries | where_exp: "page", "page.language == None" | reverse %}
   {% endif %}
-  <lu>
+  <ul>
   {%- for post in entries -%}
     {%- unless post.hidden -%}
-      <li><a href="{{post.sourceUrl}}" target="_blank">{{post.title}}. {{post.date | date: "%Y-%m-%d" }}</a></li>
+      <li>
+        <a href="{{post.sourceUrl}}" target="_blank">
+          <div class="flexBox">
+            <article class="postTit">
+              <span class="title">{{post.title}}.</span>
+              <span class="desc">감염병 대응을 위한 바이러스 분석에 대한 연구 자료</span>
+            </article>
+            <article class="postInfo">
+              <span>게재 날짜 : '22.00.00</span>
+              <span>기관 : KISTI </span>
+              <span>학술지 : ○○○</span>
+            </article>
+
+          </div>
+        </a>
+      </li>
     {%- endunless -%}
   {%- endfor -%}
-  </lu>
+  </ul>
 </div>

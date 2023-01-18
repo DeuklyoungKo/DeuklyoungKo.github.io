@@ -4,7 +4,7 @@ header:
 title:  "Global metrics for several key indicators including death rates, vaccinations, contact tracing, and public health policies."
 language: eng
 layout: single_eng
-tag: Data Analysis
+tag: "Data"
 
 
 toc: true

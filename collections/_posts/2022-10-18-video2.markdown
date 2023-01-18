@@ -4,14 +4,14 @@ categories: jekyll update
 
 header:
   teaser: /assets/images/sample09.jpg
-  overlay_image: /assets/images/bg.jpg
+  #overlay_image: /assets/images/bg.jpg
   # image: /assets/images/notice_contents.png
 
   video:
     id: cTuokF7-RXA
     provider: youtube
 
-
+tag : "SHINE 데이터"
 
 layout: single
 

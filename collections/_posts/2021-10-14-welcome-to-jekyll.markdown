@@ -3,8 +3,7 @@ layout: posts
 title:  "Welcome to Jekyll!"
 date:   2021-10-14 10:38:55 +0900
 categories: jekyll 샘플
-tag : 태그별로분류
-
+tag : "SHINE 데이터"
 # sidebar:
 #   - title: "Title"
 #     image: "/assets/images/side.jpg"

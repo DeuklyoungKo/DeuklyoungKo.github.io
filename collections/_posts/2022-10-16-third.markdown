@@ -1,10 +1,9 @@
 ---
 title:  "Welcome to Third"
 categories: jekyll update
-tag: samptest2
-
+tag: "SHINE 데이터"
 header:
-  overlay_image: /assets/images/bg.jpg
+  #overlay_image: /assets/images/bg.jpg
   # image: /assets/images/notice_contents.png
 layout: single
 # classes: wide

@@ -2,11 +2,10 @@
 title:  "forth data"
 date:   2022-10-15 10:38:55 +0900
 categories: jekyll update
-tag: samptest4
-
+tag : "SHINE 데이터"
 header:
   teaser: /assets/images/sample08.jpg
-  overlay_image: /assets/images/bg.jpg
+  #overlay_image: /assets/images/bg.jpg
   # image: /assets/images/notice_contents.png
 layout: single
 # classes: wide

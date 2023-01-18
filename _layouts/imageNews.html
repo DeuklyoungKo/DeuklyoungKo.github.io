@@ -1,24 +1,7 @@
 ---
 layout: splash
 ---
-<style>
-.imageNewsContainer{
-  display: flex;
-  flex-wrap: wrap;  
-}
 
-
-.imageNewsContainer .subContainer{
-    flex-direction: column;
-    width:33%;
-    padding:10px;
-}
-
-.imageNewsContainer .subContainer .image{
-  width:100%;
-}
-
-</style>
 {{ content }}
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
@@ -26,14 +9,26 @@ layout: splash
   {% assign entries = site[page.collection] | where_exp: "page", "page.language == None"%}
   {% for post in entries reversed %}
     <div class="subContainer">
-      <div class="image">
-        <img src="{{post.sourceImgUrl | relative_url}}">
-      </div>
-      <div class="imageContext">
-        <div class="title"><a href="{{ post.sourceUrl }}" target="_blink">{{ post.title }}</a></div>
-        <div>{{ post.excerpt | strip_html | truncatewords: 20 }} - {{ post.date | date: "%Y.%m.%d" }}</div>
-      </div>
+      <a href="{{ post.sourceUrl }}" target="_blink">
+        <figure><img src="{{post.sourceImgUrl | relative_url}}"></figure>
+        <div class="imageContext">
+          <div class="title">{{ post.title }}</div>
+          <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span>
+        </div>
+      </a>
     </div>  
   {% endfor %}
   </div>
+</div>
+<div class="pagination">
+  <button class="prev">이전</button>
+  <a href="" class="current">1</a>
+  <a href="" class="">2</a>
+  <a href="" class="">3</a>
+  <a href="" class="">4</a>
+  <a href="" class="">5</a>
+  <span class="ellipsis"></span>
+  <a href="" class="">10</a>
+  <button class="next">다음</button>
 </div>

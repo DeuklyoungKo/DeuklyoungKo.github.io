@@ -3,11 +3,11 @@ output: true
 
 title:  "works test"
 header:
-  overlay_image: /assets/images/bg.jpg
+  #overlay_image: /assets/images/bg.jpg
   # image: /assets/images/notice_contents.png
 
 layout: single
-
+tag : "SHINE 데이터"
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"

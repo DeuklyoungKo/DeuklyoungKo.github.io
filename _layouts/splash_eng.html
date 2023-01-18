@@ -20,6 +20,7 @@ layout: default_eng
     </section>
   </article>
 </div>
+
 <!-- Scroll Back To Top Button start -->
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <script>
@@ -31,9 +32,11 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    //mybutton.style.display = "block";
+    mybutton.style.opacity = 0.7
   } else {
-    mybutton.style.display = "none";
+    //mybutton.style.display = "none";
+    mybutton.style.opacity = 0
   }
 }
 
