@@ -18,41 +18,26 @@ layout: splash_eng
   <ul>
   {%- for post in entries -%}
     {%- unless post.hidden -%}
-      {% if post.collection == 'posts_eng' %}
-      <li>
-        <a href="{{post.url}}" target="_blank">
-          <div class="flexBox">
-            <article class="postTit">
-              <span class="title">{{post.title}}.</span>
-              <span class="desc">감염병 대응을 위한 바이러스 분석에 대한 연구 자료</span>
-            </article>
-            <article class="postInfo">
-              <span>date : '22.00.00</span>
-              <span>institution : KISTI </span>
-              <span>journal : ○○○</span>
-            </article>
-
-          </div>
-        </a>
-      </li>
-      {% else %}
       <li>
         <a href="{{post.sourceUrl}}" target="_blank">
           <div class="flexBox">
             <article class="postTit">
               <span class="title">{{post.title}}.</span>
-              <span class="desc">감염병 대응을 위한 바이러스 분석에 대한 연구 자료</span>
+              <span class="desc">{{post.subTitle}}</span>
             </article>
             <article class="postInfo">
-              <span>date : '22.00.00</span>
-              <span>institution : KISTI </span>
-              <span>journal : ○○○</span>
+              <span>date : '{{ post.date | date: "%y.%m.%d" }}</span>
+              {% if post.institution %}
+                <span>institution : {{post.institution}} </span>
+              {% endif %}
+              {% if post.journal %}
+                <span>journal : {{post.journal}}</span>
+              {% endif %}              
             </article>
 
           </div>
         </a>
       </li>
-      {% endif %}
     {%- endunless -%}
   {%- endfor -%}
   </ul>

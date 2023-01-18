@@ -23,12 +23,16 @@ layout: splash
           <div class="flexBox">
             <article class="postTit">
               <span class="title">{{post.title}}.</span>
-              <span class="desc">감염병 대응을 위한 바이러스 분석에 대한 연구 자료</span>
+              <span class="desc">{{post.subTitle}}</span>
             </article>
             <article class="postInfo">
-              <span>게재 날짜 : '22.00.00</span>
-              <span>기관 : KISTI </span>
-              <span>학술지 : ○○○</span>
+              <span>게재 날짜 : '{{ post.date | date: "%y.%m.%d" }}</span>
+              {% if post.institution %}
+                <span>기관 : {{post.institution}} </span>
+              {% endif %}
+              {% if post.journal %}
+                <span>학술지 : {{post.journal}}</span>
+              {% endif %}
             </article>
 
           </div>
