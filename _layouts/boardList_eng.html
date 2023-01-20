@@ -9,11 +9,11 @@ layout: splash_eng
   {% assign entries = site[page.collection] %}
 
   {% if page.sort_by %}
-    {% assign entries = entries | where_exp: "page", "page.language == 'eng'" | sort: page.sort_by %}
+    {% assign entries = entries | sort: page.sort_by %}
   {% endif %}
 
   {% if page.sort_order == 'reverse' %}
-    {% assign entries = entries | where_exp: "page", "page.language == 'eng'" | reverse %}
+    {% assign entries = entries | reverse %}
   {% endif %}
   <ul>
   {%- for post in entries -%}

@@ -1,20 +1,19 @@
 ---
-title:  본문 양식에 대한 샘플 페이지 입니다.
+title:  본문 양식에 대한 샘플 페이지 # 문서 제목
 
 header:
-  teaser: https://cdn.pixabay.com/photo/2020/04/15/21/52/mona-lisa-5048372_960_720.jpg # 리스트 페이지 썸네일 이미지 주소
-tag : "SHINE 데이터"
+  teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png # 리스트 페이지 썸네일 이미지 주소
+
 ##### 목차 설정 #####
 toc: true # 페이지내 목차를 사용할지 안할지 설정 true|false
 toc_label: 목차  # 목차 제목
 toc_icon: cog   # 목차 아이콘 https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임. 저자권 확인 할 것.
 toc_sticky: true  # 목차가 페이지를 따라다니게 함 true|false
 ##### 목차 설정 #####
-
-
 ---
 
-본문 양식에 대한 샘플 페이지 입니다. 해당 사이트는 [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes/about/) 테마로 제작되었습니다.
+본문 양식에 대한 샘플 페이지 입니다. 
+해당 사이트는 [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes/about/) 테마로 제작되었습니다.
 
 
 # 기본 text 양식

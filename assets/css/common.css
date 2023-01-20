@@ -1147,3 +1147,13 @@ body[class$=_eng] .page__hero--overlay .page__title {
 		width: 100%;
 	}
 }
+
+
+/* 고득용 부장 추가 */
+.contents_title{
+	align-items: center;
+	font-size: 1.8em;
+	color: #333;
+	margin: 1em 0;
+	font-weight: 600;
+}

@@ -1,5 +1,5 @@
 ---
-title:  "비디오 샘플 data"
+title:  "비디오 샘플 data1"
 categories: jekyll update
 header:
   teaser: /assets/images/sample09.jpg
@@ -49,7 +49,7 @@ toc_sticky: true
 # sidebar:
 #   nav: "foo"
 ---
-비디오 샘플 페이지 입니다. 이렇게 이용하시면 됩니다. 유튜브 또한 불러와서 보여 줄 수 있읍니다.
+비디오 샘플 페이지 입니다. 이렇게 이용하시면 됩니다. 유튜브 또한 불러와서 보여 줄 수 있읍니다. 비디오 샘플 페이지 입니다. 이렇게 이용하시면 됩니다. 유튜브 또한 불러와서 보여 줄 수 있읍니다.
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

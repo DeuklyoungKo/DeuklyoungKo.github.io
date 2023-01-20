@@ -1,8 +1,5 @@
 ---
-layout: single_eng
 title:  "content test"
-language: eng
-tag: "Data"
 header:
   teaser: https://cdn.pixabay.com/photo/2020/02/09/16/23/coronavirus-4833754_960_720.jpg
 

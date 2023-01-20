@@ -80,49 +80,79 @@ head_scripts:
 
 collections_dir: collections
 collections:
-  media:
-    output: true
-    search: false
   results:
     output: true
     search: false
-
+  results_eng:
+    output: true
+    search: false    
+  shineData:
+    output: true
+    search: false
+  shineData_eng:
+    output: true
+    search: false    
+  posts_eng:
+    output: true
+    search: false    
 
 locale: "ko"
 name: "SHINE"
 
-# paginate: 5 # amount of posts to show
-# paginate_path: "/analysis/page:num/"
+paginate: 6 # amount of posts to show
+paginate_path: "/media/page:num/"
 
 defaults:
-  -
-    scope:
+  # -
+  #   scope:
+  #     path: ""
+  #     type: ""
+  #   values:
+  #     title: 언론보도1
+  #     layout: imageNews
+  #     categories: media
+  #     read_time: true
+  #     # comments: true
+  #     # share: true
+  #     # related: true
+  #     output: true
+  #     # permalink: /media/
+  #     header:
+  #         overlay_image: /assets/images/bg_sub.jpg      
+  #     # header:
+  #     #   overlay_image: /assets/images/bg_sub.jpg
+
+  - scope:
       path: ""
-      type: posts
+      type: posts_eng
+    values:
+      layout: single_eng
+      categories: analysis eng
+      header:
+        overlay_image: /assets/images/bg2.jpg
+      tag: Data Analysis
+
+  - scope:
+      path: ""
+      type: "shineData"
     values:
       layout: single
       categories: analysis
-      read_time: true
-      # comments: true
-      # share: true
-      # related: true
-      output: true
       header:
         overlay_image: /assets/images/bg_sub.jpg
+      tag : "SHINE 데이터"
 
-  # - scope:
-  #     path: ""
-  #     type: posts_eng
-  #   values:
-  #     layout: single_eng
-  #     categories: analysis eng
-  #     header:
-  #       overlay_image: /assets/images/bg2.jpg
-  #     tag: Data Analysis
+  - scope:
+      path: ""
+      type: "shineData_eng"
+    values:
+      layout: single_eng
+      categories: analysis eng
+      header:
+        overlay_image: /assets/images/bg_sub.jpg
+      tag: Data
 
-
-
-truncateTitleLength: 23
-truncateContentLength: 35
-truncateTitleEngLength: 40
-truncateContentEngLength: 55
+# truncateTitleLength: 23
+# truncateContentLength: 35
+# truncateTitleEngLength: 40
+# truncateContentEngLength: 55

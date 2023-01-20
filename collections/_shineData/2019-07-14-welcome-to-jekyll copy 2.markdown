@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Welcome to Jekyll!2"
+title:  "Welcome to Jekyll!21"
 date:   2019-07-14 10:38:55 +0900
 categories: jekyll update
 tag : "SHINE 데이터"
@@ -15,6 +15,8 @@ tag : "SHINE 데이터"
 #     text: "More text here."
 
 ---
+한글의 단어 길이는 영어 단어의 길이보다 작습니다. 그래서 내용 줄임의 단어갯수는 20개 내외로 줄였습니다. 한글의 단어 길이는 영어 단어의 길이보다 작습니다. 그래서 내용 줄임의 단어갯수는 20개 내외로 줄였습니다. 
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:

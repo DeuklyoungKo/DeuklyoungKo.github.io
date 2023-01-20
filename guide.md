@@ -7,8 +7,8 @@ permalink: /guide/
 ## 컨텐츠 분류
 해당 사이트 내에 글을 작성할 수 있는 곳은
 ```m
-국문 : 연구성과, 데이터 분석, 언론보도
-영문 : 연구성과, 데이터 분석, 언론보도
+국문 : 연구성과, SHINE 데이터, 언론보도
+영문 : 연구성과, SHINE 데이터, 언론보도
 ```
 입니다.
 
@@ -16,9 +16,12 @@ permalink: /guide/
 이 중 **연구성과**와 **언론보도**는 리스트만 있는 페이지이며 해당 제목 클릭 시 새 탭에서 설정된 사이트가 보이게 됩니다.
 콘텐츠 추가는 국문 영문 각각 Markdown 파일을 특정 폴더에 추가하는 방식으로 구성이 되어 있으며 콘텐츠별 저장 폴더는 다음과 같습니다.
 ```m
-연구성과 국문, 영문 : /collections/_results
-데이터 분석 국문, 영문 : /collections/_posts
-언론보도 국문, 영문 : /collections/_media
+연구성과 국문 : /collections/_results
+연구성과 영문 : /collections/_results_eng
+데이터 분석 국문 : /collections/_shineData
+데이터 분석 영문 : /collections/_shineData_eng
+언론보도 국문, 영문 : /collections/_posts
+언론보도 영문 : /collections/_posts_eng
 ```
 * 데이터 분석 국문과 영문 폴더가 분리되어 있는 이유는 구문에서 리스트 페이징 기능을 사용하기 위함입니다.
 

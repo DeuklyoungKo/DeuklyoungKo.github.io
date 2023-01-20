@@ -2,7 +2,6 @@
 header:
   teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png
 title:  "Global metrics for several key indicators including death rates, vaccinations, contact tracing, and public health policies."
-language: eng
 layout: single_eng
 tag: "Data"
 
