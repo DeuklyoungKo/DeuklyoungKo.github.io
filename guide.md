@@ -31,8 +31,8 @@ SHINE 데이터 영문 : /collections/_shineData_eng
 언론보도 국문 : /collections/_posts
 언론보도 영문 : /collections/_posts_eng
 ```
-* 국문과 영문 폴더가 분리되어 있는 이유는 언론보도 국문에서 리스트 페이징 기능을 사용하기 위함입니다.
 
+## 컨텐츠 파일명
 컨텐츠 파일명은 년도-월-일-파일제목.md(또는 .markdown) 양식으로 이루어 지며 파일명의 해당 년월일이 작성일로 인식되도록 되어 있습니다. 파일제목에 국문이 포함되면 오류가 발생할 소지가 있으니 가급적 영문으로 작성하는 것이 좋습니다.
 ```m
 ex) 2022-11-02-contentstitle.md
@@ -94,16 +94,16 @@ header:
 
 toc: [페이지내 목차를 사용할지 안할지 설정, true|false, 옵션]
 toc_label: [목차 제목, 옵션]
-toc_icon: [목차 아이콘, 옵션] * https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임. 저자권 확인 할 것.
+toc_icon: [목차 아이콘, 옵션]
 toc_sticky: [목차가 페이지를 따라다니게 할지 안할지 설정,  true|false, 옵션]
 ---
 [본문내용]
 
-    ex)
+    ex1) 목차를 사용할 경우
     ---
     title:  본문 양식에 대한 샘플 페이지
     header:
-      teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png # 리스트 페이지 썸네일 이미지 주소
+      teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png
 
     toc: true
     toc_label: 목차
@@ -111,8 +111,18 @@ toc_sticky: [목차가 페이지를 따라다니게 할지 안할지 설정,  tr
     toc_sticky: true
     ---
     본문내용이 입력되는 부분입니다.
+
+
+    ex2) 목차를 사용 안할 경우
+    ---
+    title:  본문 양식에 대한 샘플 페이지
+    header:
+      teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png
+    ---
+    본문내용이 입력되는 부분입니다.
 ```
-* header: 와 teaser:사이의 2칸 들여쓰기를 주의해야 합니다.
+* header: 와 teaser:사이의 2칸 들여쓰기를 주의.
+* 목차 아이콘 사용 시 https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임 및 저자권 확인.
 
 
 
@@ -125,7 +135,7 @@ header:
 
 toc: [페이지내 목차를 사용할지 안할지 설정, true|false, 옵션]
 toc_label: [목차 제목, 옵션]
-toc_icon: [목차 아이콘, 옵션] * https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임. 저자권 확인 할 것.
+toc_icon: [목차 아이콘, 옵션] * https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임 및 저자권 확인.
 toc_sticky: [목차가 페이지를 따라다니게 할지 안할지 설정,  true|false, 옵션]
 ---
 [본문내용]
@@ -144,7 +154,7 @@ toc_sticky: [목차가 페이지를 따라다니게 할지 안할지 설정,  tr
     ---
     here is contents area.
 ```
-* header: 와 teaser:사이의 들여쓰기를 지켜야 합니다.
+* header: 와 teaser:사이의 2칸 들여쓰기를 주의.
 
 ### 언론보도 국문 Front Matter(등록폴더 : /collections/_posts)
 ```m
