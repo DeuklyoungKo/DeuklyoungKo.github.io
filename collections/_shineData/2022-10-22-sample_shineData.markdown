@@ -2,7 +2,7 @@
 title:  본문 양식에 대한 샘플 페이지 # 문서 제목
 
 header:
-  teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png # 리스트 페이지 썸네일 이미지 주소
+  teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png # 리스트 페이지 썸네일 이미지 주소.
 
 ##### 목차 설정 #####
 toc: true # 페이지내 목차를 사용할지 안할지 설정 true|false
