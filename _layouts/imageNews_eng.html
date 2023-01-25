@@ -5,7 +5,7 @@ layout: splash_eng
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   <div class="imageNewsContainer">
-  {% assign entries = site[page.collection] | where_exp: "page", "page.language == 'eng'"%}
+  {% assign entries = site[page.collection] %}
   {% for post in entries reversed %}
     <div class="subContainer">
       <a href="{{ post.sourceUrl }}" target="_blink">

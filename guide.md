@@ -18,14 +18,14 @@ permalink: /guide/
 ```m
 연구성과 국문 : /collections/_results
 연구성과 영문 : /collections/_results_eng
-데이터 분석 국문 : /collections/_shineData
-데이터 분석 영문 : /collections/_shineData_eng
+SHINE 데이터 국문 : /collections/_shineData
+SHINE 데이터 영문 : /collections/_shineData_eng
 언론보도 국문, 영문 : /collections/_posts
 언론보도 영문 : /collections/_posts_eng
 ```
-* 데이터 분석 국문과 영문 폴더가 분리되어 있는 이유는 구문에서 리스트 페이징 기능을 사용하기 위함입니다.
+* 국문과 영문 폴더가 분리되어 있는 이유는 언론보도 국문에서 리스트 페이징 기능을 사용하기 위함입니다.
 
-컨텐츠 파일명은 년도-월-일-파일제목.md(또는 .markdown) 양식으로 이루어 지며 행당 년월일이 작성일로 인식되도록 되어 있습니다. 파일제목에 국문이 포함되면 오류가 발생할 소지가 있으니 가급적 영문으로 작성하는 것이 좋습니다.
+컨텐츠 파일명은 년도-월-일-파일제목.md(또는 .markdown) 양식으로 이루어 지며 파일명의 해당 년월일이 작성일로 인식되도록 되어 있습니다. 파일제목에 국문이 포함되면 오류가 발생할 소지가 있으니 가급적 영문으로 작성하는 것이 좋습니다.
 ```m
 ex) 2022-11-02-contentstitle.md
 or  2022-11-02-covid19Result2022.markdown
@@ -41,74 +41,104 @@ ref) [Front Matter](https://jekyllrb.com/docs/front-matter/)
 ```m
 ---
 title: [제목]
+subTitle: [상세설명]
 sourceUrl: [사이트 링크 URL]
+institution: [발행기관명, 옵션]
+journal: [발행잡지명, 옵션]
 ---
 
     ex)
     ---
-    title:  "감염병 대응을 위한 바이러스 분석에 대한 연구 자료 Part. 4"
-    sourceUrl: https://www.google.com
+    title:  "감염병 재난 대비 및 관리"
+    subTitle:  "재난및 안전관리 기본법에 따르면, 재난은 국민의 생명,신체,재산과 국가에 피해를 주거나"
+    sourceUrl: https://www.kdca.go.kr/contents.es?mid=a20401070407
+    institution: 카이스트
+    journal: KSPT
     ---
 ```
 
-### 연구성과 영문 Front Matter(등록폴더 : /collections/_results)
+### 연구성과 영문 Front Matter(등록폴더 : /collections/_results_eng)
 ```m
 ---
 title: [제목]
+subTitle: [상세설명]
 sourceUrl: [사이트 링크 URL]
-language: eng
+institution: [발행기관명, 옵션]
+journal: [발행잡지명, 옵션]
 ---
 
     ex)
     ---
-    title:  "Research data on virus analysis for response"
+    title:  "Research data on virus analysis for response to infectious diseases Part. 5"
     sourceUrl: https://www.google.com
-    language: eng
+    subTitle: "Research data on virus analysis for response to infectious diseases sub title  diseases sub title 5"
+    institution: KIST
+    journal: KSPT
     ---
 ```
 
-### 데이터분석 국문 Front Matter(등록폴더 : /collections/_posts)
+### SHINE 데이터 국문 Front Matter(등록폴더 : /collections/_shineData)
 ```m
 ---
-title: [제목]
+title:  [제목]
 header:
-    teaser: [썸네일 이미지가 있을 경우 썸네일 이미지 URL]
+  teaser: [리스트 페이지 썸네일 이미지 주소]
+
+toc: [페이지내 목차를 사용할지 안할지 설정, true|false, 옵션]
+toc_label: [목차 제목, 옵션]
+toc_icon: [목차 아이콘, 옵션] * https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임. 저자권 확인 할 것.
+toc_sticky: [목차가 페이지를 따라다니게 할지 안할지 설정,  true|false, 옵션]
 ---
+[본문내용]
 
     ex)
     ---
-    title:  "데이터분석 결과 2022 연구 보고"
+    title:  본문 양식에 대한 샘플 페이지
     header:
-        teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png
+      teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png # 리스트 페이지 썸네일 이미지 주소
+
+    toc: true
+    toc_label: 목차
+    toc_icon: cog
+    toc_sticky: true
     ---
+    본문내용이 입력되는 부분입니다.
+```
+* header: 와 teaser:사이의 2칸 들여쓰기를 주의해야 합니다.
+
+
+
+### SHINE 데이터 영문 Front Matter(등록폴더 : /collections/_shineData_eng)
+```m
+---
+title:  [제목]
+header:
+  teaser: [리스트 페이지 썸네일 이미지 주소]
+
+toc: [페이지내 목차를 사용할지 안할지 설정, true|false, 옵션]
+toc_label: [목차 제목, 옵션]
+toc_icon: [목차 아이콘, 옵션] * https://fontawesome.com/v5/search?o=r&m=free&s=solid 페이지에서 아이콘 네임. 저자권 확인 할 것.
+toc_sticky: [목차가 페이지를 따라다니게 할지 안할지 설정,  true|false, 옵션]
+---
+[본문내용]
+
+
+    ex)
+    ---
+    title:  "Welcome to SHINE"
+    header:
+      teaser: https://cdn.pixabay.com/photo/2020/02/09/16/23/coronavirus-4833754_960_720.jpg
+
+    toc: true
+    toc_label: contents
+    toc_icon: cog
+    toc_sticky: true      
+    ---
+    here is contents area.
 ```
 * header: 와 teaser:사이의 들여쓰기를 지켜야 합니다.
 
-### 데이터분석 영문 Front Matter(등록폴더 : /collections/_posts)
-```m
----
-title: [제목]
-header:
-    teaser: [썸네일 이미지가 있을 경우 썸네일 이미지 URL]
-language: eng
-layout: single_eng
-tag: Data Analysis
----
-
-    ex)
-    ---
-    title:  "Global metrics for several key indicators"
-    header:
-        teaser: https://www.fda.gov/files/COVID%20testing%20policy_1600x900_0.png
-    language: eng
-    layout: single_eng
-    tag: Data Analysis
-    ---
-```
-* header: 와 teaser:사이의 들여쓰기를 지켜야 합니다.
-* language, layout, tag는 고정 값입니다.
-
-### 언론보도 국문 Front Matter(등록폴더 : /collections/_media)
+### 언론보도 국문 Front Matter(등록폴더 : /collections/_posts)
 ```m
 ---
 title: [제목]
@@ -116,6 +146,7 @@ sourceUrl: [사이트 링크 URL]
 sourceImgUrl: [썸네일 이미지 URL]
 ---
 [리스트에 나오는 본문내용]
+
     ex)
     ---
     title:  "KT, 감염병 대응연구 앱 `샤인` 개편…코로나19 연구 나선다"
@@ -125,18 +156,17 @@ sourceImgUrl: [썸네일 이미지 URL]
     KT는 AI(인공지능) 기반 감염병 대응연구 애플리케이션 '샤인'의 연구 범위를 독감에서 코로나19까지 확대 개편했다고 15일 밝혔다.
 ```
 
-### 언론보도 영문 Front Matter(등록폴더 : /collections/_media)
+### 언론보도 영문 Front Matter(등록폴더 : /collections/_posts_eng)
 ```m
 ---
 title: [제목]
 sourceUrl: [사이트 링크 URL]
 sourceImgUrl: [썸네일 이미지 URL]
-language: eng
 ---
 [리스트에 나오는 본문내용]
     ex)
     ---
-    title:  "KT, 감염병 대응연구 앱 `샤인` 개편…코로나19 연구 나선다"
+    title:  "'Shine', KT reorganizes its infectious disease response research app"
     sourceUrl: https://shineforall.org/shine-news/?uid=10&mod=document&pageid=1
     sourceImgUrl: https://shineforall.org/wp-content/uploads/kboard_attached/1/202204/6253847cf19ce2830572.jpg
     language: eng

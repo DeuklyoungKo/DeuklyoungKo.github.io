@@ -348,7 +348,7 @@ span.br { display: block;}
         .flexBox { justify-content: space-between; align-items: flex-end;
           .postTit {
             .title { font-weight: bold; font-size: em(27px, 22px); @include ellipsis(1, 1.6em); width: 730px;}
-            .desc { font-size: em(22px, 22px); margin-top: em(10px, 22px);}
+            .desc { font-size: em(22px, 22px); margin-top: em(10px, 22px); max-width: 750px;}
           }
           .postInfo {
             span { font-size: em(18px, 22px); padding-left:em(8px, 22px); margin-right: em(30px, 22px); position: relative; 

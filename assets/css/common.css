@@ -434,6 +434,7 @@ span.br {
 .entries-list ul li a .flexBox .postTit .desc {
 	font-size: 1em;
 	margin-top: 0.4545454545em;
+	max-width: 750px;
 }
 .entries-list ul li a .flexBox .postInfo span {
 	font-size: 0.8181818182em;

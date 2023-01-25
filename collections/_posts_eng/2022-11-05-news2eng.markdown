@@ -1,7 +1,0 @@
----
-title:  "Prepare measures to minimize the spread of respiratory infectious diseases in indoor facilities"
-sourceUrl: https://ncov.kdca.go.kr/tcmBoardView.do?brdId=3&brdGubun=31&dataGubun=&ncvContSeq=6943&contSeq=6943&board_id=311&gubun=ALL
-sourceImgUrl: https://is.kdca.go.kr/covid19_is/front_new/modules/img_view.jsp?img_loc=/upload/mwEditor/202210/1666950158513_20221028184238.png
-language: eng
----
-Regular briefing of the Corona 19 Central Disaster and Safety Countermeasures Headquarters (202.10.28.), prepare measures to minimize the spread of respiratory infectious diseases in indoor facilities. Identification of ventilation status for infection-prone facilities, ventilation performance evaluation, improvement of ventilation standards, etc., ventilation measurement and ventilation performance evaluation training for epidemiological investigators, and ventilation-related guidelines (Wise Ventilation Guidelines - Air purifier edition) will be distributed (November)
